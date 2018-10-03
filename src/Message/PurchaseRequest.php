@@ -60,7 +60,7 @@ class PurchaseRequest extends AbstractRequest
         return array(
             'LMI_PAYEE_PURSE'         => $this->getMerchantPurse(),
             'LMI_PAYMENT_AMOUNT'      => $this->getAmount(),
-            'LMI_PAYMENT_NO'          => $this->getTransactionId(),
+            'LMI_PAYMENT_NO'          => $this->getInvId(),
             'LMI_PAYMENT_DESC_BASE64' => base64_encode($this->getDescription()),
             'LMI_SIM_MODE'            => $this->getTestMode() ? '2' : '0',
             'LMI_RESULT_URL'          => $this->getNotifyUrl(),
