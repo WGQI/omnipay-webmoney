@@ -27,6 +27,21 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     {
         return $this->getParameter('webMoneyId');
     }
+    /**
+    * @return integer id
+    */
+    public function getInvId()
+    {
+        return $this->getParameter('invid');
+    }
+    
+    /**
+    * @return self
+    */
+    public function setInvId($value)
+    {
+        return $this->setparameter('invid', $value);
+    }
 
     /**
      * Set the WebMoney Id.
