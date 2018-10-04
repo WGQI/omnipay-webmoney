@@ -116,15 +116,15 @@ class CompletePurchaseResponse extends AbstractResponse
 
         return strtoupper(hash(
             $hashType,
-            $this->data['LMI_PAYEE_PURSE'].
-            $this->data['LMI_PAYMENT_AMOUNT'].
-            $this->data['LMI_PAYMENT_NO'].
-            $this->data['LMI_MODE'].
-            $this->data['LMI_SYS_INVS_NO'].
-            $this->data['LMI_SYS_TRANS_NO'].
-            $this->data['LMI_SYS_TRANS_DATE'].
-            $this->request->getSecretkey().
-            $this->data['LMI_PAYER_PURSE'].
+            $this->data['LMI_PAYEE_PURSE'].';'.
+            $this->data['LMI_PAYMENT_AMOUNT'].';'.
+            $this->data['LMI_PAYMENT_NO'].';'.
+            $this->data['LMI_MODE'].';'.
+            $this->data['LMI_SYS_INVS_NO'].';'.
+            $this->data['LMI_SYS_TRANS_NO'].';'.
+            $this->data['LMI_SYS_TRANS_DATE'].';'.
+            $this->request->getSecretkey().';'.
+            $this->data['LMI_PAYER_PURSE'].';'.
             $this->data['LMI_PAYER_WM']
         ));
     }
